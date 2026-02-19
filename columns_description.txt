@@ -1,0 +1,312 @@
+STUDENT DROPOUT PREDICTION - COLUMN DESCRIPTIONS
+=================================================
+
+DEMOGRAPHICS
+============
+
+1. age
+   - Data Type: Integer
+   - Description: Student's current age in years
+   - Range: 16-28 years
+   - Relevance: Mature students may have different dropout patterns
+
+2. gender
+   - Data Type: Categorical
+   - Values: Male, Female
+   - Description: Student's gender
+   - Relevance: May show different retention patterns
+
+3. state_of_origin
+   - Data Type: Categorical
+   - Values: Lagos, Kano, Rivers, Oyo, Anambra, Kaduna, Enugu, Ogun, Delta, Edo, etc.
+   - Description: Nigerian state of origin
+   - Relevance: Distance from home and cultural factors
+
+4. distance_from_home_km
+   - Data Type: Integer
+   - Description: Distance from family home to university
+   - Range: 10-800 km
+   - Relevance: Far from home = homesickness, higher costs
+
+5. marital_status
+   - Data Type: Categorical
+   - Values: Single, Married
+   - Description: Marital status
+   - Relevance: Married students have additional responsibilities
+
+6. has_children
+   - Data Type: Binary (0 or 1)
+   - Description: Student has children
+   - Relevance: Childcare responsibilities affect study time
+
+ACADEMIC BACKGROUND
+===================
+
+7. admission_score
+   - Data Type: Integer
+   - Description: JAMB/entrance exam score
+   - Range: 180-350 (out of 400)
+   - Relevance: Higher entry scores predict better retention
+
+8. secondary_school_type
+   - Data Type: Categorical
+   - Values: Public, Private
+   - Description: Type of secondary school attended
+   - Relevance: Private school students often better prepared
+
+9. secondary_cgpa
+   - Data Type: Float
+   - Description: Secondary school CGPA
+   - Range: 2.0-5.0
+   - Relevance: Past academic performance predicts future success
+
+CURRENT ACADEMIC STATUS
+========================
+
+10. year_of_study
+    - Data Type: Integer
+    - Description: Current year/level in program
+    - Range: 1-5
+    - Relevance: Year 1 and final year have different dropout risks
+
+11. current_cgpa
+    - Data Type: Float
+    - Description: Cumulative Grade Point Average
+    - Range: 1.5-5.0 (5.0 scale)
+    - Relevance: PRIMARY PREDICTOR - Low CGPA = high dropout risk
+
+12. course_load_per_semester
+    - Data Type: Integer
+    - Description: Credit units registered per semester
+    - Range: 12-30 units
+    - Relevance: Overload can cause burnout
+
+13. attendance_percentage
+    - Data Type: Integer (Percentage)
+    - Description: Class attendance rate
+    - Range: 30-100%
+    - Relevance: Poor attendance strongly predicts dropout
+
+14. number_of_failed_courses
+    - Data Type: Integer
+    - Description: Total failed courses to date
+    - Range: 0-15
+    - Relevance: Many failures = academic struggle
+
+15. number_of_repeated_courses
+    - Data Type: Integer
+    - Description: Courses retaken
+    - Range: 0-8
+    - Relevance: Repetition indicates academic difficulty
+
+16. semester_gpa_trend
+    - Data Type: Categorical
+    - Values: Improving, Stable, Declining
+    - Description: Trend in semester GPAs
+    - Relevance: Declining trend is major red flag
+
+PROGRAM DETAILS
+===============
+
+17. department
+    - Data Type: Categorical
+    - Values: Engineering, Medicine, Law, Science, Arts, Social_Sciences, Education, 
+             Business_Admin, Agriculture, Environmental_Studies
+    - Description: Academic department
+    - Relevance: Some programs have higher dropout rates
+
+18. is_stem
+    - Data Type: Binary (0 or 1)
+    - Description: STEM field (Science, Tech, Engineering, Math)
+    - Relevance: STEM programs often more rigorous
+
+19. program_difficulty
+    - Data Type: Categorical
+    - Values: Very_High, High, Moderate, Low
+    - Description: Perceived program difficulty
+    - Relevance: Harder programs = higher dropout risk
+
+FINANCIAL FACTORS
+=================
+
+20. scholarship_status
+    - Data Type: Categorical
+    - Values: Full, Partial, None
+    - Description: Scholarship coverage
+    - Relevance: Financial support reduces dropout risk
+
+21. family_income_level
+    - Data Type: Categorical
+    - Values: Low, Medium, High
+    - Description: Family socioeconomic status
+    - Relevance: Financial hardship drives dropout
+
+22. fee_payment_status
+    - Data Type: Categorical
+    - Values: Fully_Paid, Partially_Paid, Owing
+    - Description: School fees payment status
+    - Relevance: Owing fees can lead to forced withdrawal
+
+23. has_part_time_job
+    - Data Type: Binary (0 or 1)
+    - Description: Working part-time while studying
+    - Relevance: Work-study balance affects academics
+
+24. receives_allowance
+    - Data Type: Binary (0 or 1)
+    - Description: Receives regular allowance from family
+    - Relevance: Financial stability supports retention
+
+25. financial_stress_level
+    - Data Type: Categorical
+    - Values: Low, Moderate, High, Very_High
+    - Description: Level of financial stress
+    - Relevance: High stress = high dropout risk
+
+ENGAGEMENT & SOCIAL
+===================
+
+26. library_visits_per_week
+    - Data Type: Integer
+    - Description: Times student visits library weekly
+    - Range: 0-15
+    - Relevance: Library use indicates academic engagement
+
+27. online_platform_usage_hours
+    - Data Type: Integer
+    - Description: Hours per week on LMS/e-learning platforms
+    - Range: 0-30
+    - Relevance: Online engagement predicts success
+
+28. participation_in_clubs
+    - Data Type: Binary (0 or 1)
+    - Description: Active in student clubs/societies
+    - Relevance: Social integration reduces dropout
+
+29. has_mentor
+    - Data Type: Binary (0 or 1)
+    - Description: Has academic/personal mentor
+    - Relevance: Mentorship strongly protects against dropout
+
+30. peer_study_groups
+    - Data Type: Binary (0 or 1)
+    - Description: Participates in study groups
+    - Relevance: Peer learning improves retention
+
+31. social_integration_score
+    - Data Type: Integer
+    - Description: How well integrated into campus community
+    - Range: 1-10 (1=isolated, 10=well integrated)
+    - Relevance: Isolation increases dropout risk
+
+ACCOMMODATION
+=============
+
+32. accommodation_type
+    - Data Type: Categorical
+    - Values: Campus_Hostel, Off_Campus, Living_with_Family, Private_Hostel
+    - Description: Where student lives
+    - Relevance: Campus living increases engagement
+
+HEALTH & WELLBEING
+==================
+
+33. health_status
+    - Data Type: Categorical
+    - Values: Excellent, Good, Fair, Poor
+    - Description: General physical health
+    - Relevance: Poor health affects attendance and performance
+
+34. mental_health_support
+    - Data Type: Binary (0 or 1)
+    - Description: Receiving mental health support
+    - Relevance: Support services reduce dropout
+
+35. stress_level
+    - Data Type: Categorical
+    - Values: Low, Moderate, High, Very_High
+    - Description: Overall stress level
+    - Relevance: Chronic stress leads to burnout
+
+ACADEMIC SUPPORT
+================
+
+36. received_academic_counseling
+    - Data Type: Binary (0 or 1)
+    - Description: Received academic counseling/advising
+    - Relevance: Counseling helps struggling students
+
+37. tutoring_sessions_attended
+    - Data Type: Integer
+    - Description: Number of tutoring sessions attended
+    - Range: 0-20
+    - Relevance: Tutoring improves academic outcomes
+
+38. faculty_interaction_frequency
+    - Data Type: Categorical
+    - Values: Rare, Occasional, Regular, Frequent
+    - Description: How often student interacts with faculty
+    - Relevance: Faculty contact increases retention
+
+PERSONAL FACTORS
+================
+
+39. motivation_level
+    - Data Type: Categorical
+    - Values: Very_Low, Low, Moderate, High, Very_High
+    - Description: Intrinsic motivation to complete degree
+    - Relevance: Low motivation = high dropout risk
+
+40. career_clarity
+    - Data Type: Categorical
+    - Values: Very_Unclear, Unclear, Somewhat_Clear, Clear, Very_Clear
+    - Description: Clarity about career goals
+    - Relevance: Clear goals increase persistence
+
+41. family_support
+    - Data Type: Categorical
+    - Values: Very_Low, Low, Moderate, High, Very_High
+    - Description: Level of family emotional/practical support
+    - Relevance: Family support is protective factor
+
+PREVIOUS ISSUES
+===============
+
+42. previous_warnings
+    - Data Type: Integer
+    - Description: Academic warnings received
+    - Range: 0-5
+    - Relevance: Warnings indicate serious academic problems
+
+43. probation_status
+    - Data Type: Binary (0 or 1)
+    - Description: Currently on academic probation
+    - Relevance: Probation = very high dropout risk
+
+BACKGROUND
+==========
+
+44. first_generation_student
+    - Data Type: Binary (0 or 1)
+    - Description: First in family to attend university
+    - Relevance: First-gen students need more support
+
+45. parent_education_level
+    - Data Type: Categorical
+    - Values: No_Formal, Primary, Secondary, Tertiary
+    - Description: Highest parent education level
+    - Relevance: Educated parents provide better support
+
+TARGET VARIABLE
+===============
+
+46. will_dropout (TARGET)
+    - Data Type: Binary (0 or 1)
+    - Description: Will student drop out before graduation?
+    - Values: 0 = Will Continue, 1 = Will Dropout
+    - This is what we're trying to predict
+
+    Risk Factors Summary:
+    HIGH RISK: CGPA < 2.5, Owing fees, Probation, Poor attendance
+    MEDIUM RISK: Declining GPA, Financial stress, Low motivation
+    LOW RISK: Full scholarship, High GPA, Strong support system
